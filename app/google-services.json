@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "353518846958",
+    "project_id": "chatwizapplication",
+    "storage_bucket": "chatwizapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353518846958:android:790f363dc4cf2b291884ff",
+        "android_client_info": {
+          "package_name": "com.example.chatwizapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353518846958-g42oos49sr17qhv9764jqo3jcd21jimf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatwizapplication",
+            "certificate_hash": "65bb5fb517ff675b25de825ee0e5d77a829bfa90"
+          }
+        },
+        {
+          "client_id": "353518846958-f2veb45nkin9ogf3bse8t9jkenfieml6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDotDf-P7af6baQVCxW89plOslVGlT_W_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353518846958-f2veb45nkin9ogf3bse8t9jkenfieml6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

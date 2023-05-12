@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
 
                     if (it.isSuccessful) {
-                        val intent1 = Intent(this,HomeActivity::class.java)
+                        val intent1 = Intent(this@LoginActivity,HomeActivity::class.java)
                         startActivity(intent1)
                     } else {
                         Log.e("error", it.exception.toString())

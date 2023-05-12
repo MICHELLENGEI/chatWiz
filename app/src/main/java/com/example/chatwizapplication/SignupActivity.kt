@@ -8,13 +8,17 @@ import android.util.Patterns
 import android.widget.Toast
 import com.example.chatwizapplication.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 class SignupActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignupBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +26,9 @@ class SignupActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         auth = Firebase.auth
+
         binding.btnSignup2.setOnClickListener {
+            val name = binding.etNameSignUp.text.toString()
             val email = binding.etEmailSignUp.text.toString()
             val password = binding.etPasswordSignUp.text.toString()
             val confirmPassword = binding.etConfirmPassword.text.toString()
@@ -33,10 +39,27 @@ class SignupActivity : AppCompatActivity() {
                     Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT).show()
 
                     if (it.isSuccessful) {
-                        val intent3 = Intent(this, HomeActivity::class.java)
-                        startActivity(intent3)
-                    } else {
-                        Log.e("error", it.exception.toString())
+
+                        val user: FirebaseUser? = auth.currentUser
+                        val userId: String = user!!.uid
+
+                        databaseReference =
+                            FirebaseDatabase.getInstance().getReference("users").child(userId)
+
+                        val hashMap: HashMap<String, String> = HashMap()
+                        hashMap.put("userId", userId)
+                        hashMap.put("username", name)
+                        hashMap.put("confirmPassword", confirmPassword)
+
+                        databaseReference.setValue(hashMap).addOnCompleteListener() {  dbTask->
+
+                            if (dbTask.isSuccessful) {
+                                val intent3 = Intent(this@SignupActivity, HomeActivity::class.java)
+                                startActivity(intent3)
+                            } else {
+                                Log.e("error", dbTask.exception.toString())
+                            }
+                        }
                     }
                 }
             }

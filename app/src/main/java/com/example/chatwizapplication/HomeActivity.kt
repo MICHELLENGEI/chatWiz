@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        replaceFragment(ChatsFragment())
+        replaceFragment(CallsFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {

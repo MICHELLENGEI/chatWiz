@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/calls"
+        android:icon="@drawable/baseline_call_24"
+        android:title="Calls"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/baseline_chat_24"
+        android:title="Chats"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="Notification"
+        tools:ignore="HardcodedText" />
+</menu>

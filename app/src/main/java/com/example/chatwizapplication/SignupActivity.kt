@@ -56,6 +56,7 @@ class SignupActivity : AppCompatActivity() {
                             if (dbTask.isSuccessful) {
                                 val intent3 = Intent(this@SignupActivity, HomeActivity::class.java)
                                 startActivity(intent3)
+                                finish()
                             } else {
                                 Log.e("error", dbTask.exception.toString())
                             }

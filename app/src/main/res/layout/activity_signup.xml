@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome!"
-        android:textColor="#5C6598"
+        android:textColor="#3c64b3"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#F1C133">
+        app:passwordToggleTint="#f3cb54">
 
         <EditText
             android:id="@+id/etPasswordSignUp"
@@ -119,7 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#F1C133">
+        app:passwordToggleTint="#f3cb54">
 
         <EditText
             android:id="@+id/etConfirmPassword"
@@ -152,9 +152,9 @@
         android:id="@+id/btnSignup2"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:backgroundTint="#F1C133"
+        android:backgroundTint="#f3cb54"
         android:text="Signup"
-        android:textColor="#464F85"
+        android:textColor="#3c64b3"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,6 +182,7 @@
             android:layout_height="wrap_content"
             android:text="Already have an account?"
             android:textSize="15sp"
+            android:textColor="#3c64b3"
             tools:ignore="HardcodedText"
             tools:layout_editor_absoluteX="164dp"
             tools:layout_editor_absoluteY="483dp" />
@@ -191,7 +192,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textColor="#F1C133"
+            android:textColor="#f3cb54"
             android:textSize="15sp"
             tools:ignore="HardcodedText"
             tools:layout_editor_absoluteX="303dp"

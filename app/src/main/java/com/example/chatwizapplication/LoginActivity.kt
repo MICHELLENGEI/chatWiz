@@ -33,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         val intent1 = Intent(this@LoginActivity,HomeActivity::class.java)
                         startActivity(intent1)
+                        finish()
                     } else {
                         Log.e("error", it.exception.toString())
                     }
@@ -43,7 +44,6 @@ class LoginActivity : AppCompatActivity() {
         binding.tvSignUp.setOnClickListener {
             val intentTvSignup = Intent(this, SignupActivity::class.java)
             startActivity(intentTvSignup)
-            finish()
         }
     }
 

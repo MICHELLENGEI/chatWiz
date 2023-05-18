@@ -21,12 +21,15 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:background="@color/blue_yonder"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        app:itemTextColor="@drawable/icon_tint_selector"
+        app:itemIconTint="@drawable/icon_tint_selector"
+        app:itemRippleColor="@color/blue_yonder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue_yonder">#3c64b3</color>
     <color name="soft_orange">#f3cb54</color>
+    <color name="Transparent">#00EEE1CA</color>
 
 </resources>
